@@ -1,0 +1,93 @@
+
+
+<html ng-app="scotchApp">
+
+<head>
+  <!-- SCROLLS -->
+
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+  <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+
+  <!-- SPELLS -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+  <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+  <script src="https://www.amcharts.com/lib/3/serial.js"></script>
+  <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+  <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+  
+  <script src="main.js"></script>
+	<style type="text/css">
+     .sidenav {
+    width: 130px;
+    position: fixed;
+    z-index: 1;
+    top: 20px;
+    left: 10px;
+    background: #eee;
+    overflow-x: hidden;
+    padding: 8px 0;
+  }
+
+  .sidenav a {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #2196F3;
+      display: block;
+  }
+
+  .sidenav a:hover {
+      color: #064579;
+  }
+
+  .main {
+      margin-left: 140px; /* Same width as the sidebar + left position in px */
+      font-size: 28px; /* Increased text to enable scrolling */
+      padding: 0px 10px;
+  }
+
+  @media screen and (max-height: 300px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+  }
+
+	#chartdiv {
+		width	: 100%;
+		height	: 400px;
+	}						
+	</style>
+</head>
+
+<!-- define angular controller -->
+<body ng-controller="aaplController">
+
+  
+    <div class="container">
+      <div class="navbar-header">
+        A Header
+      </div>
+     
+      <div class="sidenav">
+       <ul>
+         <li><a href="#"class="active"> AAPL</a></li>
+         <li><a href="#msft">MSFT</a></li>
+         <li><a href="#nflx">NFLX</a></li>
+       </ul>
+      </div>
+    </div>
+  
+  <div class="main">    
+    <div ng-view></div>   
+  </div>
+  
+  <footer class="text-center">
+    <p>Footer</p>  
+  </footer>
+  
+</body>
+
+</html>
+							
